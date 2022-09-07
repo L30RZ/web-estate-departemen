@@ -19,10 +19,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
   <tr>
     <th>#</th>
     <th>Gambar</th>
-    <th>NRP</th>
     <th>Nama</th>
-    <th>Email</th>
-    <th>Jurusan</th>
     <th>Aksi</th>
 
   </tr>
@@ -30,12 +27,9 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     <tr>
       <td>1</td>
       <td><img src="img/<?= $m['gambar']; ?>" width="80"></td>
-      <td><?= $m['nrp']; ?></td>
       <td><?= $m['nama']; ?></td>
-      <td><?= $m['email']; ?></td>
-      <td><?= $m['jurusan']; ?></td>
       <td>
-        <a href="">Ubah</a> | <a href="">Hapus</a>
+        <a href="detail.php?id=<?= $m['id']; ?>">lihat detail</a>
       </td>
     <tr>
     <?php endforeach; ?>
